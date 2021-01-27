@@ -42,7 +42,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: RPC_Windows.exe
-        path: ${{ runner.workspace }}\rpc\build\Release\rpc.exe 
+        path: ${{ runner.workspace }}\rpc\build\Debug\rpc.exe 
 
   build-linux:
     runs-on: ${{ matrix.os }}
