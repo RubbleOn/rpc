@@ -37,7 +37,7 @@ jobs:
     - name: Prepare for build
       run:  cd build && cmake .. -DCMAKE_PREFIX_PATH=D:/a/rpc/rpc/vcpkg/installed/x64-windows-static -DVCPKG_TARGET_TRIPLET=x64-windows-static -DCMAKE_TOOLCHAIN_FILE=D:/a/rpc/rpc/vcpkg/scripts/buildsystems/vcpkg.cmake
     - name: Build RPC
-      run: cd build && cmake --build . --config Release
+      run: cd build && cmake --build . --config Debug
     - name: GitHub Upload Release Artifacts
       uses: actions/upload-artifact@v2
       with:
@@ -73,7 +73,7 @@ jobs:
     - name: Prepare for build
       run:  cd build && cmake .. -DCMAKE_TOOLCHAIN_FILE=${{ runner.workspace }}/rpc/vcpkg/scripts/buildsystems/vcpkg.cmake
     - name: Build RPC
-      run: cd build && cmake --build . --config Release
+      run: cd build && cmake --build . --config Debug
     - name: GitHub Upload Release Artifacts
       uses: actions/upload-artifact@v2
       with:
